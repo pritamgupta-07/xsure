@@ -52,6 +52,7 @@ const page = () => {
                 )}
             </div>
             {clientSecret && (
+                //@ts-ignore
                 <Elements options={options} stripe={stripePromise}>
                     <CheckoutForm />
                 </Elements>
