@@ -13,7 +13,7 @@ const conn = async () => {
             console.log("Connecting to database");
             return new NextResponse("Connecting to database");
         }
-        await mongoose.connect(process.env.MONGODB_URI!, {
+        await mongoose.connect("mongodb+srv://pritam-gupta-saas:6nSOZzOPQ8YF5ZZO@dineswift-connect.3fqi2wo.mongodb.net/?retryWrites=true&w=majority", {
             dbName: "myDB",
             bufferCommands: false
         })
