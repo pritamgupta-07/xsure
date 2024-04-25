@@ -17,7 +17,6 @@ export const POST = async (req: Request) => {
     const data = await req.json()
     await conn();
     try {
-        console.log("Data : ", data)
         const newProject = new project(data)
         await newProject.save()
         return new NextResponse(JSON.stringify(newProject))
